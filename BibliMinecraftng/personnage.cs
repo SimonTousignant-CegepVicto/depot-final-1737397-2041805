@@ -20,7 +20,7 @@ namespace BibliMinecrafting
         private int[] jambe;
         private int[] botte;
         private int[,] barreAcces;
-
+        private int objetEquipe;
 
         public Personnage(string nom, double [,] position, ushort faim, ushort vie, int [,] inventaire, int [] backpack,
                                 int [] tete, int [] plastron,
@@ -82,6 +82,21 @@ namespace BibliMinecrafting
         /// </summary>
         public void Deplacer()
         {
+        }
+        /// <summary>
+        /// change l'item en main en changeant l'index dans de la barre d'accès
+        /// </summary>
+        public void ChangerObjet()
+        {
+            Console.WriteLine("Quelle est l'index de l'objet voulez vous avoir en main ?");
+            int index;
+            if(int.TryParse(Console.ReadLine(), out index) && int.Parse(Console.ReadLine()) >= 1 && int.Parse(Console.ReadLine()) <= 9)
+            {
+                index = int.Parse(Console.ReadLine());
+                objetEquipe = index;
+            }
+            else
+                Console.WriteLine("index invalide");
         }
     }
 }

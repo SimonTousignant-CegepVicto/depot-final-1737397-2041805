@@ -22,5 +22,9 @@ namespace BibliMinecrafting
             this.durete = durete;
             this.predilection = predilection;
         }
+        public override void Utilisation()
+        {
+            
+        }
     }
 }
