@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliMinecrafting", "BibliMinecraftng\BibliMinecrafting.csproj", "{F2C0575C-5DD4-45C5-B7D9-F4CE1ABF8CE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliMinecraftingTest", "BibliMinecraftingTest\BibliMinecraftingTest.csproj", "{CAB18EC4-383E-49A0-8120-2B37F310FE62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CegepVicto.TechInfo.H21.P2.DA1737397.DA1861437.Minecrafting", "CegepVicto.TechInfo.H21.P2.DA1737397.DA1861437.Minecrafting\CegepVicto.TechInfo.H21.P2.DA1737397.DA1861437.Minecrafting.csproj", "{C0C45C2D-3A86-4CF2-BD31-133552F67A4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2C0575C-5DD4-45C5-B7D9-F4CE1ABF8CE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2C0575C-5DD4-45C5-B7D9-F4CE1ABF8CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2C0575C-5DD4-45C5-B7D9-F4CE1ABF8CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2C0575C-5DD4-45C5-B7D9-F4CE1ABF8CE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB18EC4-383E-49A0-8120-2B37F310FE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB18EC4-383E-49A0-8120-2B37F310FE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB18EC4-383E-49A0-8120-2B37F310FE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB18EC4-383E-49A0-8120-2B37F310FE62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C45C2D-3A86-4CF2-BD31-133552F67A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C45C2D-3A86-4CF2-BD31-133552F67A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C45C2D-3A86-4CF2-BD31-133552F67A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C45C2D-3A86-4CF2-BD31-133552F67A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68F01136-135E-4074-B0AE-5B4BF5DAF0CF}
+	EndGlobalSection
+EndGlobal

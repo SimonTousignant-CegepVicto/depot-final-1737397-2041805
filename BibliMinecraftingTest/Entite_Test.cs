@@ -1,0 +1,26 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using BibliMinecrafting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BibliMinecraftingTest
+{
+    [TestClass()]
+    public class Entite_Test
+    {
+        [TestMethod()]
+        public void Entite()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void Entite1()
+        {
+            Assert.Fail();
+        }
+    }
+}
