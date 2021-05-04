@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using BibliMinecrafting;
 namespace BibliMinecrafting
 {
     /// <summary>
@@ -11,55 +11,97 @@ namespace BibliMinecrafting
     /// </summary>
     public class Personnage : Entite
     {
-        private ushort faim;
-        private ushort vie;
-        private int[,] inventaire;
-        private int[] backpack;
-        private int[] tete;
-        private int[] plastron;
-        private int[] jambe;
-        private int[] botte;
-        private int[,] barreAcces;
+        private ushort faim = 10;
+        private ushort vie = 20; 
+        private ushort niveau_Protection = 0;
+        private Backpack [] backpack = new Backpack [3]; 
+        private Item[,] inventaire = new Item[2, 2];
+        private Item[] barreAcces = new Item[4];
+        private bool tete = false;
+        private bool plastron = false;
+        private bool jambe = false;
+        private bool botte = false;
 
-
-        public Personnage(string nom, double [,] position, ushort faim, ushort vie, int [,] inventaire, int [] backpack,
-                                int [] tete, int [] plastron,
-                                int [] jambe, int [] botte, int [,] barreAcces)
+        public Personnage(string nom, double [,] position, int [,] inventaire)
         {
-            this.faim = faim;
-            this.vie = vie;
-            this.inventaire = inventaire;
-            this.backpack = backpack;
-            this.tete = tete;
-            this.plastron = plastron;
-            this.jambe = jambe;
-            this.botte = botte;
-            this.plastron = plastron; 
+            this.nom = nom;
+            this.position = position; 
         }
 
+
+       
         /// <summary>
         /// permet de manger de la nourriture pour augmenter sa barre de faim
         /// </summary>
         public void Manger()
         {
-         
-            
-        }
 
+            barreAcces[0] = new Fruit("pomme", true, 5, 5); 
+            /*
+            if(barreAcces[0] != this)
+            string bouffe_Mangee = Console.ReadLine();
+
+            switch (bouffe_Mangee.ToLower())
+            {
+                case "fruit":
+                    Fruit pomme = new Fruit("pomme", true, 5, 5);
+                    if (faim < 10)
+                    {
+                        faim += pomme.Gainbouffe;
+                        pomme = null; 
+                    }
+                    else
+                    {
+                        pomme = null; 
+                    }
+                    break; 
+            } */
+        }
         /// <summary>
         /// permet d'équiper une armure sur différente partie du corps
         /// </summary>
         public void Equiper()
+        {     
+            Console.WriteLine("Quel équipement voulez-vous équiper(tete, plastron, jambe,botte)");
+            string armure_Equipee = Console.ReadLine();
+            switch (armure_Equipee.ToLower())
+            
+            {
+                
+                case "tete":
+                    Casque b = new Casque(false, "diamant", 200, 5);
+                    tete = true;
+                    niveau_Protection += b.Protection; 
+                    break;
+
+                case "plaston":
+                    Plastron c = new Plastron(false, "diamant", 200, 5);
+                    plastron = true;
+                    niveau_Protection += c.Protection; 
+                    break;
+
+                case "jambiere":
+                    Jambiere d = new Jambiere(false, "diamant", 200, 5); 
+                    jambe = true;
+                    niveau_Protection += d.Protection; 
+                    break;
+
+                case "botte":
+                    Bottes e = new Bottes(false, "diamant", 200, 5);
+                    botte = true;
+                    niveau_Protection += e.Protection; 
+                    break;
+                default: 
+                      Console.WriteLine("Veuillez réessayer, vous avez entré une mauvaise information");
+                    break; 
+            }
+        }
+
+
+
+        public void Pertefaim()
         {
-            //Console.WriteLine("Quel équipement voulez-vous équiper(tete, plastron, jambe,botte)");
-            //string armure_equipee = Console.ReadLine();
-            //switch (armure_equipee)
-            //{
-            //    case 1:
-            //        plastron = 1; 
-            //}
-
-
+            faim -= 1;  
         }
         /// <summary>
         /// permet le gain et la perte de vie 

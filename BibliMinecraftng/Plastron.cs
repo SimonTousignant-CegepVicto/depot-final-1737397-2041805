@@ -22,6 +22,19 @@ namespace BibliMinecrafting
             this.durabilite = durabilite;
             this.protection = protection;
         }
+
+        public ushort Protection
+        {
+            get
+            {
+                return protection;
+            }
+            set
+            {
+                this.protection = value;
+            }
+        }
+
         /// <summary>
         /// Équiper le plastron
         /// </summary>
