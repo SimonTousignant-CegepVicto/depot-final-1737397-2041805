@@ -31,5 +31,12 @@ namespace BibliMinecrafting
         /// Briser le type d'outil
         /// </summary>
         public abstract void Briser();
+        /// <summary>
+        /// Baisser la durabilité d'un point
+        /// </summary>
+        public override void Utilisation()
+        {
+            base.Utilisation();
+        }
     }
 }

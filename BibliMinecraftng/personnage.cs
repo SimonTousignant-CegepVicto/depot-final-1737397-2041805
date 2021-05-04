@@ -90,13 +90,21 @@ namespace BibliMinecrafting
         {
             Console.WriteLine("Quelle est l'index de l'objet voulez vous avoir en main ?");
             int index;
-            if(int.TryParse(Console.ReadLine(), out index) && int.Parse(Console.ReadLine()) >= 1 && int.Parse(Console.ReadLine()) <= 9)
+            if(int.TryParse(Console.ReadLine(), out index) && int.Parse(Console.ReadLine()) >= 0 && int.Parse(Console.ReadLine()) <= 8)
             {
                 index = int.Parse(Console.ReadLine());
                 objetEquipe = index;
             }
             else
                 Console.WriteLine("index invalide");
+        }
+        /// <summary>
+        /// Brise un bloc
+        /// </summary>
+        public void BriserBloc()
+        {
+            Console.WriteLine("Quelle bloc voulez vous détruire ? Terre, Bois ou Pierre ?");
+
         }
     }
 }

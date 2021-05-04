@@ -34,5 +34,12 @@ namespace BibliMinecrafting
         {
 
         }
+        /// <summary>
+        /// Baisser la hache d'un point de durabilité
+        /// </summary>
+        public override void Utilisation()
+        {
+            base.Utilisation();
+        }
     }
 }
