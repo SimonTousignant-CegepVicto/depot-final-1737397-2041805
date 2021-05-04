@@ -36,5 +36,12 @@ namespace BibliMinecrafting
             {
             }
         }
+        /// <summary>
+        /// Baisser l'épée d'un point de durabilité
+        /// </summary>
+        public override void Utilisation()
+        {
+            base.Utilisation();
+        }
     }
 }

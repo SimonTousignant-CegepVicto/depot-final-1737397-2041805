@@ -15,12 +15,18 @@ namespace BibliMinecrafting
         /// <param name="position"></param>
         /// <param name="durete"></param>
         /// <param name="predilection"></param>
-        public Bois(string nom, double[,] position, ushort durete, string predilection)
+        /// <param name="necessitePredilection"></param>
+        public Bois(string nom, double[,] position, ushort durete, string predilection, bool necessitePredilection)
         {
             this.nom = nom;
             this.position = position;
             this.durete = durete;
             this.predilection = predilection;
+            this.necessitePredilection = necessitePredilection;
+        }
+        public override void Utilisation()
+        {
+            base.Utilisation();
         }
     }
 }

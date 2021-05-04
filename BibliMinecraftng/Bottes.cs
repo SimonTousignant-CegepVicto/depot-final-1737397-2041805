@@ -10,12 +10,14 @@ namespace BibliMinecrafting
         /// <summary>
         /// Constructeur d'objet Bottes
         /// </summary>
+        /// <param name="stackable"></param>
         /// <param name="materiel">Le Matériel dont il est fait</param>
         /// <param name="durabilite">La durabilité des bottes</param>
         /// <param name="protection">Niveau de protection</param>
-        public Bottes(bool stackable, string materiel, ushort durabilite, ushort protection)
+
+        public Bottes(string materiel, ushort durabilite, ushort protection)
         {
-            this.stackable = stackable;
+            stackable = false;
             this.materiel = materiel;
             this.durabilite = durabilite;
             this.protection = protection;

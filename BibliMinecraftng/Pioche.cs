@@ -28,9 +28,19 @@ namespace BibliMinecrafting
             this.type = type;
 
         }
+        /// <summary>
+        /// Briser la pioche
+        /// </summary>
         public override void Briser()
         {
 
+        }
+        /// <summary>
+        /// Baisser la pioche d'un point de durabilité
+        /// </summary>
+        public override void Utilisation()
+        {
+            base.Utilisation();
         }
     }
 }
