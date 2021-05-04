@@ -15,12 +15,14 @@ namespace BibliMinecrafting
         /// <param name="position"></param>
         /// <param name="durete"></param>
         /// <param name="predilection"></param>
+        /// <param name="necessitePredilection"></param>
         public Terre(string nom, double[,] position, ushort durete, string predilection)
         {
             this.nom = nom;
             this.position = position;
             this.durete = durete;
             this.predilection = predilection;
+            this.necessitePredilection = necessitePredilection;
         }
     }
 }

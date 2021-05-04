@@ -27,6 +27,13 @@ namespace BibliMinecrafting
             {
             }
         }
+        protected bool necessitePredilection
+        {
+            get => default;
+            set
+            {
+            }
+        }
         /// <summary>
         /// constructeur qui permet d'éviter le code d'erreur CS7036
         /// </summary>
@@ -39,12 +46,14 @@ namespace BibliMinecrafting
         /// <param name="position">Position du bloc sur la carte</param>
         /// <param name="durete">Dureté du bloc</param>
         /// <param name="predilection">Quel type d'outil est plus efficace pour briser le bloc</param>
-        public Bloc(string nom, double [,] position, ushort durete, string predilection)
+        /// <param name="necessitePredilection"></param>
+        public Bloc(string nom, double [,] position, ushort durete, string predilection, bool necessitePredilection)
         {
             this.nom = nom;
             this.position = position;
             this.durete = durete;
             this.predilection = predilection;
+            this.necessitePredilection = necessitePredilection;
         }
         /// <summary>
         /// Briser le bloc

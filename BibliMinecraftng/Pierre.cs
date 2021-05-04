@@ -15,6 +15,7 @@ namespace BibliMinecrafting
         /// <param name="position"></param>
         /// <param name="durete"></param>
         /// <param name="predilection"></param>
+        /// <param name="necessitePredilection"></param>
         public Pierre(string nom, double[,] position, ushort durete, string predilection)
         {
             this.nom = nom;
