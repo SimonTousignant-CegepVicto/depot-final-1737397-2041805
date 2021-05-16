@@ -74,6 +74,7 @@ namespace BibliMinecrafting
 
 
             // vérifie si l'item en main est un Armure
+            //ajoute d'un commentaire
             
             if(barreAcces[0] is Armure)
             {
