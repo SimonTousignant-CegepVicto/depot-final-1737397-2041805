@@ -13,14 +13,24 @@ namespace BibliMinecrafting
         /// <param name="materiel">Le Matériel dont il est fait</param>
         /// <param name="durabilite">La durabilité des bottes</param>
         /// <param name="protection">Niveau de protection</param>
-        public Bottes(string nom, double[,] position, string materiel, ushort durabilite, ushort protection)
+        public Bottes(bool stackable, string materiel, ushort durabilite, ushort protection)
         {
-            stackable = false;
-            this.nom = nom;
-            this.position = position;
+            this.stackable = stackable;
             this.materiel = materiel;
             this.durabilite = durabilite;
             this.protection = protection;
+
+        }
+        public override ushort Protection
+        {
+            get
+            {
+                return protection;
+            }
+            set
+            {
+                this.protection = value;
+            }
         }
         /// <summary>
         /// Équiper les Bottes

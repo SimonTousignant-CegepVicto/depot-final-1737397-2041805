@@ -24,6 +24,21 @@ namespace BibliMinecrafting
         /// <summary>
         /// Équiper des jambières
         /// </summary>
+        /// 
+
+        public override ushort Protection
+        {
+            get
+            {
+                return protection;
+            }
+
+            set
+            {
+                this.protection = value;
+            }
+
+        }
         public override void Utilisation()
         {
             

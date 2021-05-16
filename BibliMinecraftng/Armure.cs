@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BibliMinecrafting
 {
-    public class Armure : Utilitaire
+    public abstract class Armure : Utilitaire
     {
         protected ushort protection;
 
@@ -25,8 +25,17 @@ namespace BibliMinecrafting
             this.stackable = stackable;
             this.materiel = materiel;
             this.durabilite = durabilite;
-            this.protection = protection; 
+            this.protection = protection;
         }
+
+        public abstract ushort Protection
+        {
+            get;
+
+            set;
+
+        }
+
 
 
         /// <summary>
@@ -37,5 +46,8 @@ namespace BibliMinecrafting
         {
 
         }
-    }
+        
+            
+        
+    
 }
