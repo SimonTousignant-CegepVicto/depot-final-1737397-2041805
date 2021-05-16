@@ -21,22 +21,11 @@ namespace BibliMinecrafting
         {
             this.nom = nom;
             this.stackable = stackable;
-            this.saturation = saturation;
+
             this.gainbouffe = gainbouffe;
         }
 
-        public ushort Saturation
-        {
-            get
-            {
-                return saturation;
-            }
-            set
-            {
-                this.saturation = value;
-            }
-        }
-        public ushort Gainbouffe
+        public override ushort Gainbouffe
         {
             get
             {

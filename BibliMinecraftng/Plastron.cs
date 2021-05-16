@@ -8,6 +8,9 @@ namespace BibliMinecrafting
     public class Plastron : Armure
 
     {
+
+
+        
         /// <summary>
         /// constructeur pour le plastron
         /// </summary>
@@ -17,13 +20,13 @@ namespace BibliMinecrafting
         /// <param name="protection">determine le nombre de point d'armure que le plastron donne</param>
         public Plastron(bool stackable, string materiel, ushort durabilite, ushort protection)
         {
-            this.stackable = stackable;
+            this.stackable = false; 
             this.materiel = materiel;
             this.durabilite = durabilite;
             this.protection = protection;
         }
 
-        public ushort Protection
+        public override ushort Protection
         {
             get
             {

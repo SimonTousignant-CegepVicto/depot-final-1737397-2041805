@@ -16,25 +16,26 @@ namespace BibliMinecrafting
         /// <param name="protection">determine le nombre de point d'armure que le casque donne</param>
         /// 
 
-        public Casque() { }
         public Casque(bool stackable, string materiel, ushort durabilite, ushort protection)
             {
-                this.stackable = stackable;
+                this.stackable = false; 
                 this.materiel = materiel;
                 this.durabilite = durabilite;
                 this.protection = protection;
             }
 
-        public ushort Protection
+        public override ushort Protection
         {
             get
             {
-                return protection;
+                return protection; 
             }
+
             set
             {
                 this.protection = value; 
             }
+
         }
 
         /// <summary>

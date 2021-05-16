@@ -26,16 +26,18 @@ namespace BibliMinecrafting
         /// </summary>
         /// 
 
-        public ushort Protection
+        public override ushort Protection
         {
             get
             {
                 return protection;
             }
+
             set
             {
                 this.protection = value;
             }
+
         }
         public override void Utilisation()
         {

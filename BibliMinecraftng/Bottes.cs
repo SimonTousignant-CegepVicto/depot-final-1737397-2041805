@@ -19,10 +19,9 @@ namespace BibliMinecrafting
             this.materiel = materiel;
             this.durabilite = durabilite;
             this.protection = protection;
+
         }
-
-
-        public ushort Protection
+        public override ushort Protection
         {
             get
             {
