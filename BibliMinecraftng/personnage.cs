@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BibliMinecrafting;
 
 namespace BibliMinecrafting
 {
@@ -12,108 +11,55 @@ namespace BibliMinecrafting
     /// </summary>
     public class Personnage : Entite
     {
-        private ushort faim = 10;
-        private ushort vie = 20; 
-        private ushort niveau_Protection = 0;
-        private Item [] backpack = new Item [3]; 
-        private Item[,] inventaire = new Item[2, 2];
-        private Item[] barreAcces = new Item[4];
-        private Item [] tete = new Item[0];
-        private Item[] corps = new Item[0];
-        private Item[] jambes = new Item[0];
-        private Item[] pieds = new Item[0];
+        private ushort faim;
+        private ushort vie;
+        private int[,] inventaire;
+        private int[] backpack;
+        private int[] tete;
+        private int[] plastron;
+        private int[] jambe;
+        private int[] botte;
+        private int[,] barreAcces;
 
-        public Personnage(string nom)
+
+        public Personnage(string nom, double [,] position, ushort faim, ushort vie, int [,] inventaire, int [] backpack,
+                                int [] tete, int [] plastron,
+                                int [] jambe, int [] botte, int [,] barreAcces)
         {
-            this.nom = nom;
-        
+            this.faim = faim;
+            this.vie = vie;
+            this.inventaire = inventaire;
+            this.backpack = backpack;
+            this.tete = tete;
+            this.plastron = plastron;
+            this.jambe = jambe;
+            this.botte = botte;
+            this.plastron = plastron; 
         }
 
-        Personnage felix = new Personnage("Felix"); 
-
-       
         /// <summary>
         /// permet de manger de la nourriture pour augmenter sa barre de faim
         /// </summary>
-        public string Manger()
+        public void Manger()
         {
-             Fruit pomme = new Fruit( "pomme", true, 5, 5);
+         
             
-            if(barreAcces[0] is Bouffe)
-            {
-                ushort valeurBouffe = barreAcces[0].gainBouffe; 
-
-                if(valeurBouffe + felix.faim > 10)
-                {
-                    felix.faim = 10;
-                    barreAcces[0] = null; 
-                }
-                else
-                {
-                    felix.faim += valeurBouffe;
-                    barreAcces[0] = null;
-                }
-                return "Vous vous êtes délecté de ce repas"; 
-            }
-            else
-            {
-                string messageErreurManger = "L'objet que vous tentez de manger n'est pas nutritif";
-                return messageErreurManger; 
-            }
         }
+
         /// <summary>
-        /// permet d'équiper une armure sur différente partie du corps. L'armure doit correspondre
-        /// a la partie du corps concernée
+        /// permet d'équiper une armure sur différente partie du corps
         /// </summary>
         public void Equiper()
         {
-            Casque b = new Casque(false, "diamant", 10, 10);
-            Plastron c = new Plastron(false, "diamant", 10, 10);
-            Jambiere d = new Jambiere(false, "diamant", 10, 10);
-            Bottes e = new Bottes(false, "diamant", 10, 10); 
+            //Console.WriteLine("Quel équipement voulez-vous équiper(tete, plastron, jambe,botte)");
+            //string armure_equipee = Console.ReadLine();
+            //switch (armure_equipee)
+            //{
+            //    case 1:
+            //        plastron = 1; 
+            //}
 
 
-            // vérifie si l'item en main est un Armure
-            
-            if(barreAcces[0] is Armure)
-            {
-                // Vérifie le type d'armure en main
-                if (barreAcces[0] is Casque) 
-                {
-                    // Vient chercher la valeur de protection de l'armure en main
-                    ushort point_Armure = barreAcces[0].protection;
-                    // l'ajoute a notre personnage
-
-                   // Casque casque_Cloner = barreAcces[0].DeepCopy();
-                    felix.niveau_Protection += point_Armure;
-                    barreAcces.CopyTo(felix.tete, 0); 
-                  //  felix.tete[0] = barreAcces[0].Clone;
-                    barreAcces[0] = null; 
-                }
-
-                else if (barreAcces[0] is Plastron)
-                {
-
-                }
-
-                else if ( barreAcces[0] is Jambiere)
-                {
-
-                }
-                else if (barreAcces[0] is Bottes)
-                {
-
-                }
-            }
-            
-        }
-
-  
-
-
-        public void Pertefaim()
-        {
-            faim -= 1;  
         }
         /// <summary>
         /// permet le gain et la perte de vie 
@@ -132,11 +78,10 @@ namespace BibliMinecrafting
            
         }
         /// <summary>
-        /// permet de mettre un objet dans son index 0 de la barre d'access (la main) 
+        /// permet de se déplacer sur la carte en modifiant la position du personnage
         /// </summary>
         public void Deplacer()
         {
-
         }
     }
 }
