@@ -12,16 +12,16 @@ namespace BibliMinecrafting
     /// </summary>
     public class Personnage : Entite
     {
-        private ushort faim = 10;
-        private ushort vie = 20; 
-        private ushort niveau_Protection = 0;
-        private Item [] backpack = new Item [3]; 
-        private Item[,] inventaire = new Item[2, 2];
-        private Item[] barreAcces = new Item[4];
-        private Item [] tete = new Item[0];
-        private Item[] corps = new Item[0];
-        private Item[] jambes = new Item[0];
-        private Item[] pieds = new Item[0];
+        private ushort Faim = 10;
+        private ushort Vie = 20; 
+        private ushort Niveau_Protection = 0;
+        private Item [] Backpack = new Item [3]; 
+        private Item[,] Inventaire = new Item[2, 2];
+        private Item[] BarreAcces = new Item[4];
+        private Item [] Tete = new Item[0];
+        private Item[] Corps = new Item[0];
+        private Item[] Jambes = new Item[0];
+        private Item[] Pieds = new Item[0];
 
         public Personnage(string nom)
         {
@@ -39,19 +39,19 @@ namespace BibliMinecrafting
         {
              Fruit pomme = new Fruit( "pomme", true, 5, 5);
             
-            if(barreAcces[0] is Bouffe)
+            if(BarreAcces[0] is Bouffe)
             {
-                ushort valeurBouffe = barreAcces[0].GainBouffe; 
+                ushort valeurBouffe = BarreAcces[0].GainBouffe; 
 
-                if(valeurBouffe + felix.faim > 10)
+                if(valeurBouffe + felix.Faim > 10)
                 {
-                    felix.faim = 10;
-                    barreAcces[0] = null; 
+                    felix.Faim = 10;
+                    BarreAcces[0] = null; 
                 }
                 else
                 {
-                    felix.faim += valeurBouffe;
-                    barreAcces[0] = null;
+                    felix.Faim += valeurBouffe;
+                    BarreAcces[0] = null;
                 }
                 return "Vous vous êtes délecté de ce repas"; 
             }
@@ -76,37 +76,37 @@ namespace BibliMinecrafting
             // vérifie si l'item en main est un Armure
             //ajoute d'un commentaire
             
-            if(barreAcces[0] is Armure)
+            if(BarreAcces[0] is Armure)
             {
                 // Vérifie le type d'armure en main
-                if (barreAcces[0] is Casque) 
+                if (BarreAcces[0] is Casque) 
                 {
                     // Vient chercher la valeur de protection de l'armure en main
-                    ushort point_Armure = barreAcces[0].protection;
+                    ushort point_Armure = BarreAcces[0].protection;
                     // l'ajoute a notre personnage
 
                    // Casque casque_Cloner = barreAcces[0].DeepCopy();
-                    felix.niveau_Protection += point_Armure;
-                    barreAcces.CopyTo(felix.tete, 0);
-                    tete[0] = barreAcces.ElementAt(0);
+                    felix.Niveau_Protection += point_Armure;
+                    BarreAcces.CopyTo(felix.Tete, 0);
+                    Tete[0] = BarreAcces.ElementAt(0);
 
-                    barreAcces = barreAcces.Where((obj, 0) => 0 != 0).ToArray());
+                   // barreAcces = barreAcces.Where((obj, 0) => 0 != 0).ToArray());
                    
                     
                     // barreAcces.Pop();
 
                 }
 
-                else if (barreAcces[0] is Plastron)
+                else if (BarreAcces[0] is Plastron)
                 {
 
                 }
 
-                else if ( barreAcces[0] is Jambiere)
+                else if ( BarreAcces[0] is Jambiere)
                 {
 
                 }
-                else if (barreAcces[0] is Bottes)
+                else if (BarreAcces[0] is Bottes)
                 {
 
                 }
@@ -119,7 +119,7 @@ namespace BibliMinecrafting
 
         public void Pertefaim()
         {
-            faim -= 1;  
+            Faim -= 1;  
         }
         /// <summary>
         /// permet le gain et la perte de vie 
