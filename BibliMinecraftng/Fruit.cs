@@ -17,29 +17,29 @@ namespace BibliMinecrafting
         /// <param name="stackable"></param>
         /// <param name="saturation"></param>
         /// <param name="gainbouffe"></param>
-        public Fruit(string nom, bool stackable, ushort saturation, ushort gainbouffe)
+        public Fruit(string nom, bool stackable, ushort saturation, ushort Gainbouffe)
         {
             this.nom = nom;
             this.stackable = stackable;
 
-            this.gainbouffe = gainbouffe;
+            this.Gainbouffe = Gainbouffe;
         }
 
-        public override ushort Gainbouffe
+        public ushort Gainbouffe
         {
             get
             {
-                return gainbouffe;
+                return Gainbouffe;
             }
             set
             {
-                this.gainbouffe = value;
+                this.Gainbouffe = value;
             }
         }
         protected ushort Manger()
         {
           
-            return gainbouffe; 
+            return Gainbouffe; 
         }
     }
 }

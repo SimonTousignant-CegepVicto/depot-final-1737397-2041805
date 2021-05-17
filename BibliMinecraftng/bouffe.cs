@@ -10,24 +10,23 @@ namespace BibliMinecrafting
         /// <summary>
         /// determine combien de point de bouffe la nourriture donne
         /// </summary>
-        protected ushort gainbouffe;
+        protected ushort Gainbouffe;
         /// <summary>
         /// constructeur qui permet d'éviter le code d'erreur CS7036
         /// </summary>
-        public Bouffe()
-        {
-
-        }
+        /// 
+        /// 
+        /// 
         /// <summary>
         /// accesseur pour accéder au gain de nourriture 
         /// </summary>
-        public abstract ushort Gainbouffe
+       /* public abstract ushort Gainbouffe
         {
             get;
 
             set;
   
-        }
+        } */ 
         /// <summary>
         /// Manger la bouffe
         /// </summary>
