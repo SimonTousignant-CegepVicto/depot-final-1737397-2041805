@@ -34,7 +34,7 @@ namespace BibliMinecrafting
         /// <summary>
         /// internal set qui permettent d'utiliser les accesseurs dans mes autres classes
         /// </summary>
-        public ushort gainBouffe { get; internal set; }
+       // public ushort gainBouffe { get; internal set; }
         public ushort protection { get; internal set; }
 
         /// <summary>

@@ -41,7 +41,7 @@ namespace BibliMinecrafting
             
             if(barreAcces[0] is Bouffe)
             {
-                ushort valeurBouffe = barreAcces[0].gainBouffe; 
+                ushort valeurBouffe = barreAcces[0].GainBouffe; 
 
                 if(valeurBouffe + felix.faim > 10)
                 {
@@ -87,9 +87,14 @@ namespace BibliMinecrafting
 
                    // Casque casque_Cloner = barreAcces[0].DeepCopy();
                     felix.niveau_Protection += point_Armure;
-                    barreAcces.CopyTo(felix.tete, 0); 
-                  //  felix.tete[0] = barreAcces[0].Clone;
-                    barreAcces[0] = null; 
+                    barreAcces.CopyTo(felix.tete, 0);
+                    tete[0] = barreAcces.ElementAt(0);
+
+                    barreAcces = barreAcces.Where((obj, 0) => 0 != 0).ToArray());
+                   
+                    
+                    // barreAcces.Pop();
+
                 }
 
                 else if (barreAcces[0] is Plastron)
